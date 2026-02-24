@@ -136,21 +136,24 @@ function markAsRejected(event) {
   const statusElement = card.querySelector('.status');
 
   statusElement.innerText = 'Rejected';
-  statusElement.className = "status bg-red-200 px-3 py-1 rounded inline-block";
+  statusElement.className = "status bg-red-200 px-3 py-2 rounded inline-block";
 
   const jobInfo = {
     companyName,
     html: card.outerHTML
+
   };
 
   if (!rejectedList.find(item => item.companyName === companyName)) {
     rejectedList.push(jobInfo);
+
   }
 
   interviewList = interviewList.filter(item => item.companyName !== companyName);
 
   if (currentStatus === 'interview-filter-btn') {
     renderInterviewJobs();
+
   }
 
   updateJobCounts();
