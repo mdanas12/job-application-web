@@ -77,7 +77,7 @@ function toggleStyle(id) {
 }
 
 
- 
+//  addEventListener function her......
 
 mainContainer.addEventListener('click', handleMainClick);
 
